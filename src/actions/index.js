@@ -1,11 +1,15 @@
 //axios api
 import jsonPlaceholder from "../apis/jsonPlaceholder";
 //action creator
-export const fetchPosts = async () => {
-  const response = await jsonPlaceholder.get('/posts');
+export const fetchPosts = () => {
+    return function (dispatch, getState) {
 
-  return {
-      type: 'FETCH_POSTS',
-      payload: response
-  };
+        const response = jsonPlaceholder.get('/posts');
+
+        //action object
+        return {
+            type: 'FETCH_POSTS',
+            payload: response
+        };
+    }
 };
