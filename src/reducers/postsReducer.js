@@ -5,7 +5,10 @@ export default (state, action) => {
 
     //creating/adding to an array:
     //const colors = ['red', 'green']
-    //[...colors, 'blue]
+    //[...colors, 'blue']
+
+    //removing element
+    //colors.filter(color => color !== 'blue')
 
 };
 
