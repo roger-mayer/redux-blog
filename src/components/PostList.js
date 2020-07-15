@@ -28,6 +28,7 @@ class PostList extends React.Component {
     }
 }
 
+// MAP STATE TO PROPS
 const mapStateToProps = state => {
    return { posts: state.posts };
 };
