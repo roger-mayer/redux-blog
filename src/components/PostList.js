@@ -13,13 +13,13 @@ class PostList extends React.Component {
            <div className="item" key={post.id}>
                 <i className="large middle aligned icon user" />
                <div className="content">
-                    <div className="description">
-                        <h2>{post.title}</h2>
-                        <p>{post.body}</p>
-                    </div>
+                   <div className="description">
+                       <h2>{post.title}</h2>
+                       <p>{post.body}</p>
+                   </div>
+                   <UserHeader userId={post.userId} />
                </div>
-               <UserHeader userId={10} />
-            </div>
+           </div>
             );
         });
 
