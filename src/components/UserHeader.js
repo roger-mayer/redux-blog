@@ -23,6 +23,6 @@ const mapStateToProps = (state) => {
 };
 
 export default connect(
-    null,
+    mapStateToProps,
     { fetchUser}
     )(UserHeader);
