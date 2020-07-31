@@ -20,7 +20,7 @@ class UserHeader extends React.Component{
 
 // need possible refactor to not grab all users
 const mapStateToProps = (state, ownProps) => {
-    return { users: state.users.find((user) => user.id === this.props.userId) };
+    return { user: state.users.find((user) => user.id === this.props.userId) };
 };
 
 export default connect(
