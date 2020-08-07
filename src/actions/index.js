@@ -11,19 +11,19 @@ export const fetchPosts = () => async dispatch => {
 };
 
 
-export const fetchUser = (id) => async dispatch => {
-        const response = await jsonPlaceholder.get(`/users/${id}`);
-
-        dispatch({ type: 'FETCH_USER', payload: response.data });
-
-};
-
-// export const fetchUser = function(id) {
+// export const fetchUser = (id) => async dispatch => {
+//         const response = await jsonPlaceholder.get(`/users/${id}`);
 //
-//         return async function (dispatch) {
-//                 const response = await jsonPlaceholder.get(`/users/${id}`);
+//         dispatch({ type: 'FETCH_USER', payload: response.data });
 //
-//                 dispatch({type: 'FETCH_USER', payload: response.data});
-//         };
 // };
+
+export const fetchUser = function(id) {
+
+        return _.memoize (async function (dispatch) {
+                const response = await jsonPlaceholder.get(`/users/${id}`);
+
+                dispatch({type: 'FETCH_USER', payload: response.data});
+        });
+};
 
