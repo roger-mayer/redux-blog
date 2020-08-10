@@ -3,8 +3,10 @@ import _, {memoize} from 'lodash';
 import jsonPlaceholder from "../apis/jsonPlaceholder";
 
 //action creator
-export const fetchPostsandUsers = () => async dispatch => {
-
+export const fetchPostsAndUsers = () => async dispatch => {
+        //get posts
+        await dispatch(fetchPosts());
+        console.log('fetched posts!');
 };
 
 
