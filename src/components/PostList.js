@@ -40,4 +40,5 @@ export default connect(
     { fetchPostsAndUsers }
     ) (PostList);
 
-//test commit
+
+//test
