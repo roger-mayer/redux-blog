@@ -6,8 +6,8 @@ import jsonPlaceholder from "../apis/jsonPlaceholder";
 export const fetchPostsAndUsers = () => async (dispatch, getState) => {
         //get posts
         await dispatch(fetchPosts());
-        console.log(getState().posts);
-        console.log('fetched posts!');
+        const userIds =_.uniq(_.map(getState().posts, 'userId'));
+        console.log(userIds);
 };
 
 
