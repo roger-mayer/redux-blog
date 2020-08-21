@@ -1,11 +1,11 @@
 import React from "react";
 import { connect } from "react-redux";
-import { fetchUser} from "../actions";
+// import { fetchUser} from "../actions";
 
 class UserHeader extends React.Component{
-    componentDidMount() {
-       this.props.fetchUser(this.props.userId);
-    }
+    // componentDidMount() {
+    //    this.props.fetchUser(this.props.userId);
+    // }
 
     render() {
         // const user = this.props.users.find((user) => user.id === this.props.userId);
@@ -21,11 +21,11 @@ class UserHeader extends React.Component{
 
 // need possible refactor to not grab all users
 const mapStateToProps = (state, ownProps) => {
-    return { user: state.users.find((user) => user.id === this.props.userId) };
+    return { user: state.users.find((user) => user.id === ownProps) };
 };
 
 export default connect(
     mapStateToProps,
-    { fetchUser}
+    // { fetchUser}
     )(UserHeader);
 
